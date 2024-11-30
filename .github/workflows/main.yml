@@ -41,8 +41,7 @@ jobs:
 
       - name: Test
         run: go test -v -cover ./...
-        with:
-          working-directory: go/src/github.com/${{ github.repository }}
+        working-directory: go/src/github.com/${{ github.repository }}
 
 #      - name: Install Yaegi ${{ env.YAEGI_VERSION }}
 #        run: curl -sfL https://raw.githubusercontent.com/traefik/yaegi/master/install.sh | bash -s -- -b $(go env GOPATH)/bin ${YAEGI_VERSION}
