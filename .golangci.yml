@@ -39,6 +39,7 @@ linters:
     - forbidigo
     - gofumpt
     - goimports
+    - gomnd
     - lll
     - mnd
     - nlreturn
