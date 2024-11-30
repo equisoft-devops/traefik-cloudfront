@@ -1,0 +1,27 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: lint
+      - task: test
+
+  lint:
+    cmds:
+      - golangci-lint run
+
+  test:
+    cmds:
+      - go test -v -cover ./...
+
+  yaegi_test:
+    cmds:
+      - yaegi test -v .
+
+  vendor:
+    cmds:
+      - go mod vendor
+
+  clean:
+    cmds:
+      - rm -rf ./vendor
