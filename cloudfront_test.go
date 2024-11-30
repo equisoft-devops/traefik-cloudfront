@@ -1,4 +1,4 @@
-package cloudfront_test
+package traefik_cloudfront_test
 
 import (
 	"context"
@@ -82,13 +82,13 @@ func TestCloudfront(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			ctx := context.Background()
 
-			cfg := cloudfront.CreateConfig()
+			cfg := traefik_cloudfront.CreateConfig()
 			cfg.TrustedIPs = tt.trustedIPs
 			cfg.Headers = tt.headers
 
 			next := http.HandlerFunc(func(_ http.ResponseWriter, _ *http.Request) {})
 
-			handler, err := cloudfront.New(ctx, next, cfg, "cloudfront")
+			handler, err := traefik_cloudfront.New(ctx, next, cfg, "cloudfront")
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -100,7 +100,7 @@ func TestCloudfront(t *testing.T) {
 			}
 
 			req.RemoteAddr = tt.remoteAddr
-			req.Header.Set(cloudfront.RemoteAddressHeader, tt.viewerAddress)
+			req.Header.Set(traefik_cloudfront.RemoteAddressHeader, tt.viewerAddress)
 
 			recorder := httptest.NewRecorder()
 			handler.ServeHTTP(recorder, req)

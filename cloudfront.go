@@ -1,5 +1,4 @@
-// Package cloudfront a demo plugin.
-package cloudfront
+package traefik_cloudfront
 
 import (
 	"context"
