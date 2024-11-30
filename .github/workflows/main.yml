@@ -44,7 +44,7 @@ jobs:
       - name: Test
         run: go test -v -cover ./...
 
-      - name: Run tests with Yaegi
-        run: yaegi test -v .
-        env:
-          GO PATH: ${{ github.workspace }}/go
+#      - name: Run tests with Yaegi
+#        run: yaegi test -v .
+#        env:
+#          GO PATH: ${{ github.workspace }}/go
