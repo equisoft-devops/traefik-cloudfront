@@ -1,4 +1,5 @@
-package traefik_cloudfront
+// Package traefik_cloudfront Traefik Plugin
+package traefik_cloudfront //nolint:all
 
 import (
 	"context"
