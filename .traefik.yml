@@ -1,14 +1,14 @@
-displayName: Cloudfront Forwarded IP
+displayName: AWS Cloudfront Forwarded IP
 type: middleware
 iconPath: .assets/icon.png
 
 import: github.com/invit/traefik-cloudfront
 
-summary: 'Adds X-Forwarded-IP and X-Real-IP headers provided by Cloudfront'
+summary: 'Adds the client IP from AWS Cloudfront to a list of request headers (e.g.X-Forwarded-For, X-Real-IP)'
 
 testData:
   Headers:
-    - X-Forwarded-IP
+    - X-Forwarded-For
     - X-Real-IP
   TrustedIPs:
     - 10.0.0.0/8
