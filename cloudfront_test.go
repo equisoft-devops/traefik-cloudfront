@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/invit/traefik-cloudfront"
+	traefik_cloudfront "github.com/equisoft-devops/traefik-cloudfront"
 )
 
 func TestCloudfront(t *testing.T) {
