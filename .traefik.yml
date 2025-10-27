@@ -2,7 +2,7 @@ displayName: AWS Cloudfront Forwarded IP
 type: middleware
 iconPath: .assets/icon.png
 
-import: github.com/invit/traefik-cloudfront
+import: github.com/equisoft-devops/traefik-cloudfront
 
 summary: 'Adds the client IP from AWS Cloudfront to a list of request headers (e.g.X-Forwarded-For, X-Real-IP)'
 
